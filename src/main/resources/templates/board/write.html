@@ -1,0 +1,28 @@
+<th:block th:include="include/header.html"></th:block>
+
+<div class="write_section layout_padding">
+  <div class="container">
+    <div class="col-md-12">
+      <form action="/board/write" method="post">
+        <fieldset>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">제목</label>
+            <input type="text" class="form-control" placeholder="제목을 입력해주세요" id="inputDefault" name="title">
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea" class="form-label mt-4">내용</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" name="content"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">작성자</label>
+            <input type="text" class="form-control" placeholder="이름을 입력해주세요" name="writer">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 50px;">작성하기</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+<th:block th:include="include/footer.html"></th:block>
